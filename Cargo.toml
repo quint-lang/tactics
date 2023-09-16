@@ -1,0 +1,38 @@
+[package]
+authors = ["DoBoth <kingaobo@gmail.com>"]
+description = "Tensors and dynamic neural networks."
+edition = "2021"
+keywords = ["deep-learning", "auto-differentiation", "machine-learning", "tensor", "AI-compiler"]
+license = "MIT"
+name = "tactics"
+repository = "https://github.com/quint-lang/tactics"
+version = "0.1.0"
+
+[workspace]
+members = [
+    "tactics-variable",
+    "tactics-nn",
+    "tactics-optim",
+    "tactics-data",
+    "tactics-core"
+]
+
+[features]
+blas = ["tactics-variable/blas"]
+cuda = ["tactics-variable/cuda"]
+matrixmultiply-threading = ["tactics-variable/matrixmultiply-threading"]
+serialize = ["tactics-variable/serialize"]
+
+[dependencies]
+tactics-core = {version = "*", path = "./tactics-core"}
+tactics-data = {version = "*", path = "./tactics-data"}
+tactics-nn = {version = "*", path = "./tactics-nn"}
+tactics-optim = {version = "*", path = "./tactics-optim"}
+tactics-variable = {version = "*", path = "./tactics-variable"}
+
+[dev-dependencies]
+serde_json = "1.0.72"
+
+[[example]]
+name = "quickstart"
+required-features = ["serialize"]

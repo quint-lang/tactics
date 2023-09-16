@@ -1,0 +1,10 @@
+[package]
+authors = ["DoBoth <kingaobo@gmail.com>"]
+edition = "2021"
+license = "MIT"
+name = "tactics-optim"
+version = "0.1.0"
+
+[dependencies]
+ndarray = "0.15.4"
+tactics-variable = {version = "*", path = "../tactics-variable"}

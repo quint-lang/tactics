@@ -1,0 +1,16 @@
+[package]
+authors = ["DoBoth <kingaobo@gmail.com>"]
+edition = "2021"
+license = "MIT"
+name = "tactics-nn"
+version = "0.1.0"
+
+[dependencies]
+ndarray = "0.15.4"
+tactics-core = {version = "*", path = "../tactics-core"}
+tactics-variable = {version = "*", path = "../tactics-variable"}
+rand = "0.8.4"
+rand_distr = "0.4.2"
+
+[features]
+serialize = ["tactics-variable/serialize"]
