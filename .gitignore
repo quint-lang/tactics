@@ -12,3 +12,5 @@
 
 # Clangd cache
 .cache
+
+cmake-build-*
